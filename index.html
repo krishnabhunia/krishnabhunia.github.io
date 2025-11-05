@@ -1,32 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna Bhunia - Personal Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --text-color: #1f2937;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            margin: 2rem 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-label {
+            font-weight: 600;
+            min-width: 120px;
+        }
+
+        .links-section {
+            display: grid;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .link-card {
+            padding: 1rem;
+            background: #f8fafc;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .link-card:hover {
+            transform: translateY(-2px);
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .contact-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h2>
-        Hi I am Krishna Bhunia
-        <br />
-        Contact Number +91 865 200 7894
-        <br />
-        I am also reachable at krishna.bhunia+github@gmail.com
-        <br /><br />
-        My Father Name Dipan Kanti Bhunia
-        <br />
-        Contact Number +91 93 222 10063
-        <br />
-        You can find my details on the website
-        <br /><br />
-        https://about.me/kbhunia<br />
-        <a href="https://about.me/kbhunia">Click Here to Know About Me</a>
-        <br /><br />
-        https://drive.google.com/file/d/18ht9IqcIoKw8xUYyx1sGoDfchRp2xVtk/view?usp=sharing<br />
-        <a href="https://drive.google.com/file/d/18ht9IqcIoKw8xUYyx1sGoDfchRp2xVtk/view?usp=sharing">Click Here to Download Contact Details</a>
-        <br /><br />
-        https://krishnabhunia.github.io/<br />
-        <a href="https://krishnabhunia.github.io/">Click Here for GitHub Link</a>
-        <br /><br />
-    </h2>
+    <div class="container">
+        <header class="header">
+            <h1>Krishna Bhunia</h1>
+            <p>Welcome to my personal page</p>
+        </header>
+
+        <section class="contact-info">
+            <div class="contact-item">
+                <span class="contact-label">Phone:</span>
+                <span>+91 865 200 7894</span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">Email:</span>
+                <a href="mailto:krishna.bhunia+github@gmail.com">krishna.bhunia+github@gmail.com</a>
+            </div>
+            
+            <div class="contact-item">
+                <span class="contact-label">Father's Name:</span>
+                <span>Dipan Kanti Bhunia</span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">Father's Phone:</span>
+                <span>+91 93 222 10063</span>
+            </div>
+        </section>
+
+        <section class="links-section">
+            <div class="link-card">
+                <a href="https://about.me/kbhunia" target="_blank" rel="noopener noreferrer">
+                    🔗 Know More About Me
+                </a>
+            </div>
+            
+            <div class="link-card">
+                <a href="https://drive.google.com/file/d/18ht9IqcIoKw8xUYyx1sGoDfchRp2xVtk/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    📄 Download Contact Details
+                </a>
+            </div>
+            
+            <div class="link-card">
+                <a href="https://krishnabhunia.github.io/" target="_blank" rel="noopener noreferrer">
+                    💻 Visit My GitHub Page
+                </a>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
