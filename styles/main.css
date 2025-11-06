@@ -1,6 +1,7 @@
 :root {
     --primary-color: #2563eb;
-    --text-color: #1f2937;
+    /* use black as the main readable text color */
+    --text-color: #000000;
     --bg-color: #f8fafc;
     --card-bg: #ffffff;
 }
@@ -164,13 +165,14 @@ h1 {
 }
 
 a {
-    color: var(--primary-color);
+    /* let the browser use its default link color by resetting to initial */
+    color: initial;
     text-decoration: none;
     transition: color 0.2s;
 }
 
 a:hover {
-    color: #1d4ed8;
+    color: initial;
     text-decoration: underline;
 }
 
@@ -230,8 +232,8 @@ a:hover {
 .social-id {
     opacity: 0.95;
     font-weight: 600;
-    /* colorful accent for social ids */
-    color: var(--accent-color);
+    /* use the main text color for consistent rendering */
+    color: var(--text-color);
     display: inline-block; /* consistent inline behavior across browsers */
 }
 
