@@ -116,6 +116,11 @@ h1 {
     margin: 2rem 0;
 }
 
+.red-highlight {
+    color: #dc2626;
+    font-weight: 600;
+}
+
 .contact-item {
     display: flex;
     align-items: center;
