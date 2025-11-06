@@ -222,12 +222,20 @@ a:hover {
     padding-top: 1rem;
     border-top: 1px solid #e5e7eb;
     text-align: center;
+    display: block;
+    width: 100%;
 }
 
 .last-updated {
     font-size: 0.875rem;
     color: #6b7280;
     font-style: italic;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0.5rem;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Responsive Design */
