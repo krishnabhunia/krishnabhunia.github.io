@@ -216,6 +216,20 @@ a:hover {
     font-weight: 500;
 }
 
+/* Footer Styles */
+.footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+.last-updated {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-style: italic;
+}
+
 /* Responsive Design */
 @media (max-width: 640px) {
     body {
