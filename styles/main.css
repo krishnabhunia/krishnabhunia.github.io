@@ -1,6 +1,10 @@
 :root {
     --primary-color: #2563eb;
-    --text-color: #1f2937;
+    /* primary text color changed to warm red for data/labels */
+    --text-color: #b91c1c; /* red-700 */
+    /* accent for labels and important IDs */
+    --accent-color: #ef4444; /* red-500 */
+    --muted-color: #6b7280;
     --bg-color: #f8fafc;
     --card-bg: #ffffff;
 }
@@ -135,6 +139,8 @@ h1 {
     gap: 0.5rem;
     font-weight: 600;
     min-width: 120px;
+    /* use accent color for labels to make data stand out */
+    color: var(--accent-color);
 }
 
 /* common icon sizing for contact and social icons */
@@ -169,8 +175,9 @@ a {
     transition: color 0.2s;
 }
 
+/* keep link hover readable but aligned with the red theme */
 a:hover {
-    color: #1d4ed8;
+    color: var(--text-color); /* red-700 */
     text-decoration: underline;
 }
 
@@ -213,8 +220,10 @@ a:hover {
 }
 
 .social-id {
-    opacity: 0.9;
-    font-weight: 500;
+    opacity: 0.95;
+    font-weight: 600;
+    /* colorful accent for social ids */
+    color: var(--accent-color);
 }
 
 /* Footer Styles */
