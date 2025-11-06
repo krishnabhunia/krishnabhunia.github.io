@@ -1,10 +1,6 @@
 :root {
     --primary-color: #2563eb;
-    /* primary text color changed to warm red for data/labels */
-    --text-color: #b91c1c; /* red-700 */
-    /* accent for labels and important IDs */
-    --accent-color: #ef4444; /* red-500 */
-    --muted-color: #6b7280;
+    --text-color: #1f2937;
     --bg-color: #f8fafc;
     --card-bg: #ffffff;
 }
