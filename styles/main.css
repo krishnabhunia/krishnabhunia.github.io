@@ -1,0 +1,237 @@
+:root {
+    --primary-color: #2563eb;
+    --text-color: #1f2937;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    padding: 2rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.title-meta {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    background: linear-gradient(120deg, #2563eb, #4f46e5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0.25rem 0;
+}
+
+.tagline {
+    font-size: 1rem;
+    color: #6b7280;
+    font-style: italic;
+    position: relative;
+    padding: 0 1.5rem;
+}
+
+.tagline::before,
+.tagline::after {
+    content: '"';
+    position: absolute;
+    color: #d1d5db;
+    font-size: 1.5rem;
+    font-family: serif;
+    font-style: normal;
+}
+
+.tagline::before {
+    left: 0;
+    top: -5px;
+}
+
+.tagline::after {
+    right: 0;
+    bottom: -5px;
+}
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.contact-info {
+    margin: 2rem 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.contact-item:hover {
+    background-color: #f1f5f9;
+}
+
+.contact-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    min-width: 120px;
+}
+
+/* common icon sizing for contact and social icons */
+.contact-icon,
+.social-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.links-section {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.link-card {
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.link-card:hover {
+    transform: translateY(-2px);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* Social Links Styles */
+.socials {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: #f1f5f9;
+    border-radius: 999px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.link-card:hover,
+.social-link:hover {
+    transform: translateY(-2px);
+}
+
+.social-link:hover {
+    box-shadow: 0 6px 12px rgba(16,24,40,0.06);
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.social-id {
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    body {
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
