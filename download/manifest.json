@@ -1,0 +1,16 @@
+{
+  "files": [
+    {
+      "name": "resume_pdf_1",
+      "path": "download/Krishna Python Data Engineer Resume CV One Pager Exp 12+ Yrs_1.pdf",
+      "label": "View Resume (PDF)",
+      "icon": "📄"
+    },
+    {
+      "name": "resume_pdf_2",
+      "path": "download/Krishna Python Data Engineer Resume CV One Pager Exp 12+ Yrs_2.pdf",
+      "label": "View Resume v2 (PDF)",
+      "icon": "📄"
+    }
+  ]
+}
