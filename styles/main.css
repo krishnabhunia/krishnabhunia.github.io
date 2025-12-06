@@ -128,7 +128,7 @@ h1 {
 
 .red-highlight {
     color: #dc2626;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .contact-item {
@@ -149,8 +149,14 @@ h1 {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-weight: 600;
+    font-weight: 400; /* labels: normal weight */
     min-width: 120px;
+}
+
+/* Make the actual contact data bold (non-label spans and links inside contact items) */
+.contact-item > span:not(.contact-label),
+.contact-item a {
+    font-weight: 700;
 }
 
 /* common icon sizing for contact and social icons */
