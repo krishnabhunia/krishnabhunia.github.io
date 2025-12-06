@@ -1,0 +1,39 @@
+name: Auto-update Download Manifest
+
+on:
+  push:
+    paths:
+      - 'download/**'
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  update-manifest:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      
+      - name: Generate manifest.json
+        run: |
+          node .github/scripts/generate-manifest.js
+      
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          if git diff --quiet download/manifest.json; then
+            echo "No changes to manifest.json"
+          else
+            git add download/manifest.json
+            git commit -m "chore: auto-update download manifest"
+            git push
+          fi
