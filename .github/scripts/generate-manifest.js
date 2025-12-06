@@ -21,7 +21,7 @@ const manifest = {
         return {
             name: `file_${index + 1}`,
             path: `download/${file}`,
-            label: `${label}`,
+            label: `View and Download File : ${label}`,
             icon: '📄'
         };
     })
