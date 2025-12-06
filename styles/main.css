@@ -117,9 +117,45 @@ body {
 }
 
 .profile-photo:hover {
-    transform: scale(2);
-    box-shadow: 0 24px 60px rgba(2,6,23,0.18), 0 0 0 8px rgba(79,70,229,0.08);
-    z-index: 120;
+    /* keep a subtle hover lift but avoid huge transforms that clip */
+    transform: scale(1.06);
+    box-shadow: 0 18px 48px rgba(2,6,23,0.16), 0 0 0 6px rgba(79,70,229,0.06);
+}
+
+/* Full-screen centered modal for reliably viewing enlarged photos */
+.photo-modal {
+    position: fixed;
+    inset: 0; /* top:0; right:0; bottom:0; left:0 */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(2,6,23,0.6);
+    z-index: 9999;
+    padding: 2rem;
+}
+.photo-modal.open {
+    display: flex;
+}
+.photo-modal__image {
+    max-width: 92vw;
+    max-height: 92vh;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+    box-shadow: 0 30px 80px rgba(2,6,23,0.4), 0 0 0 8px rgba(255,255,255,0.02);
+}
+.photo-modal__close {
+    position: fixed;
+    right: 1.25rem;
+    top: 1.25rem;
+    background: rgba(255,255,255,0.9);
+    border: none;
+    border-radius: 6px;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    font-weight: 700;
+    z-index: 10000;
 }
 
 /* decorative wrapper for photos */
