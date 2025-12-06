@@ -110,12 +110,16 @@ body {
     border: 4px solid #ffffff;
     /* layered shadow + subtle colored ring for a polished portrait frame */
     box-shadow: 0 10px 30px rgba(2,6,23,0.09), 0 0 0 6px rgba(79,70,229,0.04);
-    transition: transform 0.3s ease, box-shadow 0.2s ease;
+    transition: transform 0.32s cubic-bezier(.2,.9,.2,1), box-shadow 0.2s ease;
+    transform-origin: center center;
+    position: relative;
+    cursor: zoom-in;
 }
 
 .profile-photo:hover {
-    transform: scale(1.05);
-    box-shadow: 0 14px 40px rgba(2,6,23,0.12), 0 0 0 6px rgba(79,70,229,0.06);
+    transform: scale(2);
+    box-shadow: 0 24px 60px rgba(2,6,23,0.18), 0 0 0 8px rgba(79,70,229,0.08);
+    z-index: 120;
 }
 
 /* decorative wrapper for photos */
@@ -130,6 +134,7 @@ body {
     background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(248,250,252,0.6));
     border: 1px solid rgba(15,23,42,0.04);
     box-shadow: 0 4px 18px rgba(2,6,23,0.04);
+    overflow: visible;
 }
 
 h1 {
