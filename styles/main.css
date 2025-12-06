@@ -162,8 +162,8 @@ h1 {
 /* common icon sizing for contact and social icons */
 .contact-icon,
 .social-icon {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     display: inline-block;
     flex-shrink: 0;
 }
