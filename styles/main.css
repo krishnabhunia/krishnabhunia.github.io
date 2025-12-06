@@ -186,6 +186,12 @@ h1 {
     margin-bottom: 1rem;
     flex-wrap: wrap;
 }
+.tab-buttons.is-sticky {
+    background: var(--card-bg);
+    padding: 0.5rem 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(16,24,40,0.08);
+}
 .tab-button {
     background: transparent;
     border: 1px solid transparent;
