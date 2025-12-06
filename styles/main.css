@@ -36,6 +36,16 @@ body {
     border-bottom: 2px solid #e5e7eb;
 }
 
+/* Make header sticky so name and designation remain visible while scrolling */
+.header {
+    position: sticky;
+    top: 2rem; /* matches body padding on large screens */
+    background: var(--card-bg);
+    z-index: 50;
+    /* subtle shadow so the sticky header visually separates from content */
+    box-shadow: 0 2px 8px rgba(16,24,40,0.06);
+}
+
 .title-meta {
     margin-top: 0.5rem;
     display: flex;
@@ -158,6 +168,51 @@ h1 {
     margin-top: 2rem;
 }
 
+/* Tabs styles */
+.tabs {
+    margin-top: 1.25rem;
+}
+.tab-buttons {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+.tab-button {
+    background: transparent;
+    border: 1px solid transparent;
+    padding: 0.5rem 0.75rem;
+    border-radius: 999px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.12s ease, color 0.12s ease, box-shadow 0.12s ease;
+}
+.tab-button:hover {
+    background: #f3f4f6;
+}
+.tab-button.active,
+.tab-button[aria-selected="true"] {
+    background: linear-gradient(90deg, #2563eb, #4f46e5);
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(79,70,229,0.12);
+    border-color: rgba(0,0,0,0.04);
+}
+.tab-content {
+    margin-top: 0.5rem;
+}
+.tab-panel {
+    padding: 0.25rem 0.5rem;
+}
+
+/* Make sure panels have spacing when content is present */
+.tab-panel .contact-item,
+.tab-panel .link-card,
+.tab-panel .social-link {
+    margin-bottom: 0.75rem;
+}
+
 .link-card {
     padding: 1rem;
     background: #f8fafc;
@@ -272,6 +327,11 @@ a:hover {
 
     .container {
         padding: 1rem;
+    }
+
+    /* smaller top offset for sticky header on small screens */
+    .header {
+        top: 1rem;
     }
 
     .contact-item {

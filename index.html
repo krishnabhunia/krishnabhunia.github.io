@@ -21,107 +21,137 @@
             </div>
         </header>
 
-        <section class="contact-info">
-            <div class="contact-item">
-                <span class="contact-label">
-                    <svg class="contact-icon" viewBox="0 0 24 24" fill="#16a34a" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path d="M22 12A10 10 0 0012 2v2a8 8 0 018 8h2zm-6 0a4 4 0 00-4-4v2a2 2 0 012 2h2zm-4 4a2 2 0 01-2-2 2 2 0 012-2 2 2 0 012 2 2 2 0 01-2 2zm0 2c1.1 0 2 .9 2 2v1h-4v-1c0-1.1.9-2 2-2zm8-6v3a7 7 0 01-7 7v2c5 0 9-4 9-9h-2z"/>
-                    </svg>
-                    Phone:
-                </span>
-                <span class="red-highlight">+91 865 200 7894</span>
-            </div>
-            <div class="contact-item">
-                <span class="contact-label">
-                    <svg class="contact-icon" viewBox="0 0 24 24" fill="#0891b2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                    </svg>
-                    Email:
-                </span>
-                <a href="mailto:krishna.bhunia+github@gmail.com" target="_blank" rel="noopener noreferrer">krishna.bhunia+github@gmail.com</a>
-            </div>
-            
-            <div class="contact-item">
-                <span class="contact-label">
-                    <svg class="contact-icon" viewBox="0 0 24 24" fill="#6366f1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2m8-10a4 4 0 110-8 4 4 0 010 8z"/>
-                    </svg>
-                    Father's Name:
-                </span>
-                <span>Dipan Kanti Bhunia</span>
-            </div>
-            <div class="contact-item">
-                <span class="contact-label">
-                    <svg class="contact-icon" viewBox="0 0 24 24" fill="#16a34a" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path d="M22 12A10 10 0 0012 2v2a8 8 0 018 8h2zm-6 0a4 4 0 00-4-4v2a2 2 0 012 2h2zm-4 4a2 2 0 01-2-2 2 2 0 012-2 2 2 0 012 2 2 2 0 01-2 2zm0 2c1.1 0 2 .9 2 2v1h-4v-1c0-1.1.9-2 2-2zm8-6v3a7 7 0 01-7 7v2c5 0 9-4 9-9h-2z"/>
-                    </svg>
-                    Father's Phone:
-                </span>
-                <span>+91 93 222 10063</span>
-            </div>
-        </section>
+        <section class="tabs-section">
+            <div class="tabs">
+                <div class="tab-buttons" role="tablist" aria-label="Profile sections">
+                    <button id="tab-contacts" class="tab-button active" role="tab" aria-selected="true" aria-controls="panel-contacts">Basic Contacts</button>
+                    <button id="tab-socials" class="tab-button" role="tab" aria-selected="false" aria-controls="panel-socials">Social Connections</button>
+                    <button id="tab-download" class="tab-button" role="tab" aria-selected="false" aria-controls="panel-download">Download</button>
+                </div>
 
-        <!-- Socials: placeholders for Facebook / Instagram / LinkedIn -->
-        <section class="socials" aria-label="Social profiles">
+                <div class="tab-content">
+                    <div id="panel-contacts" class="tab-panel" role="tabpanel" aria-labelledby="tab-contacts">
+                        <section class="contact-info">
+                            <div class="contact-item">
+                                <span class="contact-label">
+                                    <svg class="contact-icon" viewBox="0 0 24 24" fill="#16a34a" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M22 12A10 10 0 0012 2v2a8 8 0 018 8h2zm-6 0a4 4 0 00-4-4v2a2 2 0 012 2h2zm-4 4a2 2 0 01-2-2 2 2 0 012-2 2 2 0 012 2 2 2 0 01-2 2zm0 2c1.1 0 2 .9 2 2v1h-4v-1c0-1.1.9-2 2-2zm8-6v3a7 7 0 01-7 7v2c5 0 9-4 9-9h-2z"/>
+                                    </svg>
+                                    Phone:
+                                </span>
+                                <span class="red-highlight">+91 865 200 7894</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">
+                                    <svg class="contact-icon" viewBox="0 0 24 24" fill="#0891b2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                    Email:
+                                </span>
+                                <a href="mailto:krishna.bhunia+github@gmail.com" target="_blank" rel="noopener noreferrer">krishna.bhunia+github@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">
+                                    <svg class="contact-icon" viewBox="0 0 24 24" fill="#6366f1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2m8-10a4 4 0 110-8 4 4 0 010 8z"/>
+                                    </svg>
+                                    Father's Name:
+                                </span>
+                                <span>Dipan Kanti Bhunia</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">
+                                    <svg class="contact-icon" viewBox="0 0 24 24" fill="#16a34a" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M22 12A10 10 0 0012 2v2a8 8 0 018 8h2zm-6 0a4 4 0 00-4-4v2a2 2 0 012 2h2zm-4 4a2 2 0 01-2-2 2 2 0 012-2 2 2 0 012 2 2 2 0 01-2 2zm0 2c1.1 0 2 .9 2 2v1h-4v-1c0-1.1.9-2 2-2zm8-6v3a7 7 0 01-7 7v2c5 0 9-4 9-9h-2z"/>
+                                    </svg>
+                                    Father's Phone:
+                                </span>
+                                <span>+91 93 222 10063</span>
+                            </div>
+                        </section>
+                    </div>
 
-            <a class="social-link" href="https://www.facebook.com/kdbhunia/" aria-label="Facebook profile" title="https://www.facebook.com/kdbhunia/" target="_blank" rel="noopener noreferrer">
-                <!-- Facebook SVG (simple) -->
-                <svg class="social-icon" viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M22 12a10 10 0 10-11.5 9.9v-7h-2.3v-2.9h2.3V9.4c0-2.3 1.4-3.6 3.5-3.6 1 0 2 .07 2 .07v2.3h-1.1c-1.1 0-1.4.67-1.4 1.4v1.7h2.4l-.38 2.9h-2v7A10 10 0 0022 12z"/>
-                </svg>
-                <span class="social-id">facebook.com/<strong>kdbhunia</strong></span>
-            </a>
+                    <div id="panel-socials" class="tab-panel" role="tabpanel" aria-labelledby="tab-socials" hidden>
+                        <section class="socials" aria-label="Social profiles">
 
-            <a class="social-link" href="https://www.instagram.com/krishnabhunia/" aria-label="Instagram profile" title="https://www.instagram.com/krishnabhunia/" target="_blank" rel="noopener noreferrer">
-                <!-- Instagram SVG (simple) -->
-                <svg class="social-icon" viewBox="0 0 24 24" fill="#E1306C" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6a5 5 0 100 10 5 5 0 000-10zm6.5-3a1.1 1.1 0 11-.001 2.201A1.1 1.1 0 0118.5 5z"/>
-                </svg>
-                <span class="social-id">instagram.com/<strong>@krishnabhunia</strong></span>
-            </a>
+                            <a class="social-link" href="https://www.facebook.com/kdbhunia/" aria-label="Facebook profile" title="https://www.facebook.com/kdbhunia/" target="_blank" rel="noopener noreferrer">
+                                <svg class="social-icon" viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M22 12a10 10 0 10-11.5 9.9v-7h-2.3v-2.9h2.3V9.4c0-2.3 1.4-3.6 3.5-3.6 1 0 2 .07 2 .07v2.3h-1.1c-1.1 0-1.4.67-1.4 1.4v1.7h2.4l-.38 2.9h-2v7A10 10 0 0022 12z"/>
+                                </svg>
+                                <span class="social-id">facebook.com/<strong>kdbhunia</strong></span>
+                            </a>
 
-            <a class="social-link" href="https://www.linkedin.com/in/krishnabhunia/" aria-label="LinkedIn profile" title="https://www.linkedin.com/in/krishnabhunia/" target="_blank" rel="noopener noreferrer">
-                <!-- LinkedIn SVG (simple) -->
-                <svg class="social-icon" viewBox="0 0 24 24" fill="#0A66C2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.026-3.037-1.852-3.037-1.853 0-2.136 1.446-2.136 2.941v5.665H9.351V9h3.413v1.561h.048c.476-.9 1.637-1.852 3.369-1.852 3.605 0 4.271 2.373 4.271 5.459v6.284zM5.337 7.433a2.062 2.062 0 110-4.124 2.062 2.062 0 010 4.124zM7.119 20.452H3.554V9h3.565v11.452z"/>
-                </svg>
-                <span class="social-id">linkedin.com/in/<strong>krishnabhunia</strong></span>
-            </a>
-        </section>
+                            <a class="social-link" href="https://www.instagram.com/krishnabhunia/" aria-label="Instagram profile" title="https://www.instagram.com/krishnabhunia/" target="_blank" rel="noopener noreferrer">
+                                <svg class="social-icon" viewBox="0 0 24 24" fill="#E1306C" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6a5 5 0 100 10 5 5 0 000-10zm6.5-3a1.1 1.1 0 11-.001 2.201A1.1 1.1 0 0118.5 5z"/>
+                                </svg>
+                                <span class="social-id">instagram.com/<strong>@krishnabhunia</strong></span>
+                            </a>
 
-        <section class="links-section">
-            <div class="link-card">
-                <a href="https://about.me/kbhunia" target="_blank" rel="noopener noreferrer">
-                    🔗 Know More About Me
-                </a>
-            </div>
-            
-            <div class="link-card">
-                <a href="https://drive.google.com/file/d/18ht9IqcIoKw8xUYyx1sGoDfchRp2xVtk/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                    📄 Download Contact Details
-                </a>
-            </div>
-            
-            <div class="link-card">
-                <a href="https://github.com/krishnabhunia/" target="_blank" rel="noopener noreferrer">
-                    💻 Visit My GitHub Page
-                </a>
-            </div>
+                            <a class="social-link" href="https://www.linkedin.com/in/krishnabhunia/" aria-label="LinkedIn profile" title="https://www.linkedin.com/in/krishnabhunia/" target="_blank" rel="noopener noreferrer">
+                                <svg class="social-icon" viewBox="0 0 24 24" fill="#0A66C2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.026-3.037-1.852-3.037-1.853 0-2.136 1.446-2.136 2.941v5.665H9.351V9h3.413v1.561h.048c.476-.9 1.637-1.852 3.369-1.852 3.605 0 4.271 2.373 4.271 5.459v6.284zM5.337 7.433a2.062 2.062 0 110-4.124 2.062 2.062 0 010 4.124zM7.119 20.452H3.554V9h3.565v11.452z"/>
+                                </svg>
+                                <span class="social-id">linkedin.com/in/<strong>krishnabhunia</strong></span>
+                            </a>
+                        </section>
+                    </div>
 
-            <div class="link-card">
-                <a href="Krishna Python Data Engineer Resume CV One Pager Exp 12+ Yrs.pdf" target="_blank" rel="noopener noreferrer">
-                    📄 View Resume (PDF)
-                </a>
-                &nbsp;|&nbsp;
-                <a href="Krishna Python Data Engineer Resume CV One Pager Exp 12+ Yrs.pdf" download="Krishna_Bhunia_Resume.pdf">
-                    ⤓ Download Resume
-                </a>
+                    <div id="panel-download" class="tab-panel" role="tabpanel" aria-labelledby="tab-download" hidden>
+                        <section class="links-section">
+                            <div class="link-card">
+                                <a href="https://about.me/kbhunia" target="_blank" rel="noopener noreferrer">🔗 Know More About Me</a>
+                            </div>
+                            <div class="link-card">
+                                <a href="https://drive.google.com/file/d/18ht9IqcIoKw8xUYyx1sGoDfchRp2xVtk/view?usp=sharing" target="_blank" rel="noopener noreferrer">📄 Download Contact Details</a>
+                            </div>
+                            <div class="link-card">
+                                <a href="https://github.com/krishnabhunia/" target="_blank" rel="noopener noreferrer">💻 Visit My GitHub Page</a>
+                            </div>
+                            <div class="link-card">
+                                <a href="Krishna Python Data Engineer Resume CV One Pager Exp 12+ Yrs.pdf" target="_blank" rel="noopener noreferrer">📄 View Resume (PDF)</a>
+                                &nbsp;|&nbsp;
+                                <a href="Krishna Python Data Engineer Resume CV One Pager Exp 12+ Yrs.pdf" download="Krishna_Bhunia_Resume.pdf">⤓ Download Resume</a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
             </div>
         </section>
 
         <footer class="footer">
-              <p class="last-updated">Last Updated: December 6, 2025 at 14:42:58 IST</p>
+              <p class="last-updated">Last Updated: December 6, 2025 at 14:54:41 IST</p>
         </footer>
     </div>
+    <script>
+        // Minimal tab switcher: click to activate, arrow keys to navigate
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = Array.from(document.querySelectorAll('.tab-button'));
+            const panels = Array.from(document.querySelectorAll('.tab-panel'));
+
+            function activate(index) {
+                tabs.forEach((t, i) => {
+                    const selected = i === index;
+                    t.classList.toggle('active', selected);
+                    t.setAttribute('aria-selected', selected ? 'true' : 'false');
+                    panels[i].hidden = !selected;
+                });
+            }
+
+            tabs.forEach((tab, idx) => {
+                tab.addEventListener('click', () => activate(idx));
+                tab.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowRight') {
+                        e.preventDefault();
+                        const next = (idx + 1) % tabs.length; tabs[next].focus(); activate(next);
+                    }
+                    if (e.key === 'ArrowLeft') {
+                        e.preventDefault();
+                        const prev = (idx - 1 + tabs.length) % tabs.length; tabs[prev].focus(); activate(prev);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
