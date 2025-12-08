@@ -6,6 +6,88 @@
     <title>Krishna Bhunia - Personal Page</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
     <link rel="stylesheet" href="styles/main.css">
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+    .photo-container {
+        flex-shrink: 0;
+    }
+
+    .profile-photo {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .tabs-section {
+        margin-top: 1.5rem;
+    }
+
+    .tab-buttons {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    .tab-button {
+        flex: 1 1 auto;
+        padding: 0.5rem 0.75rem;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 0.75rem;
+        }
+
+        .header {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .photo-container {
+            margin-bottom: 0.75rem;
+        }
+
+        .profile-photo {
+            width: 110px;
+            height: 110px;
+        }
+
+        .tabs-section {
+            margin-top: 1rem;
+        }
+
+        .tab-buttons {
+            gap: 0.5rem;
+        }
+
+        .tab-button {
+            flex: 1 1 100%;
+        }
+
+        .social-link {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+</style>
 </head>
 <body>
     <div class="container">
@@ -108,7 +190,7 @@
         </section>
 
         <footer class="footer">
-              <p class="last-updated">Last Updated: December 8, 2025 at 20:12:45 IST</p>
+              <p class="last-updated">Last Updated: December 8, 2025 at 20:14:53 IST</p>
         </footer>
     </div>
     <script src="scripts/tabs.js"></script>
