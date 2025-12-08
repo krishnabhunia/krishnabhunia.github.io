@@ -61,7 +61,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .subtitle {
@@ -104,11 +104,17 @@ body {
     bottom: -5px;
 }
 
+.header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
 .photo-container {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin-bottom: 1.5rem;
     flex-wrap: wrap;
 }
 
@@ -173,7 +179,6 @@ body {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin-bottom: 1.5rem;
     flex-wrap: wrap;
     padding: 0.75rem;
     border-radius: 16px;
@@ -186,7 +191,6 @@ body {
 h1 {
     font-size: 2.5rem;
     color: var(--text-color);
-    margin-bottom: 1rem;
 }
 
 .contact-info {
