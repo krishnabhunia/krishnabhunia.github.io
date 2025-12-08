@@ -32,18 +32,25 @@ body {
 .header {
     text-align: center;
     margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
     border-bottom: 2px solid #e5e7eb;
 }
 
 /* Make header sticky so name and designation remain visible while scrolling */
 .header {
     position: sticky;
-    top: 2rem; /* matches body padding on large screens */
-    background: var(--card-bg);
+    top: 1rem; /* Adjust sticky position */
     z-index: 50;
-    /* subtle shadow so the sticky header visually separates from content */
-    box-shadow: 0 2px 8px rgba(16,24,40,0.06);
+
+    /* Set background image with a semi-transparent overlay for readability */
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../images/IMG_20170330_093055.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Add padding and border-radius for better aesthetics */
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
 
 .title-meta {
