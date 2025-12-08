@@ -16,7 +16,11 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--bg-color);
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../images/IMG_20170330_093055.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     padding: 2rem;
 }
 
@@ -36,6 +40,8 @@ body {
     gap: 2rem;
     margin-bottom: 2rem;
     border-bottom: 2px solid #e5e7eb;
+    padding: 1rem;
+    border-radius: 12px;
 }
 
 /* Make header sticky so name and designation remain visible while scrolling */
