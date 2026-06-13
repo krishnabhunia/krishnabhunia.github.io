@@ -1,5 +1,10 @@
 {
     "chat.fontSize": 12,
     "scm.inputFontSize": 12,
-    "markdown.preview.fontSize": 12
+    "markdown.preview.fontSize": 12,
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
 }
