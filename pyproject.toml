@@ -1,17 +1,49 @@
 [project]
 name = "krishnabhunia-github-io"
 version = "0.1.0"
-description = ""
+description = "Personal portfolio and site utilities"
 authors = [
     {name = "KRISHNA DIPAYAN BHUNIA",email = "krishnabhunia@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = [
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0",
 ]
 
 [tool.poetry]
 packages = [{include = "krishnabhunia"}]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --strict-markers --tb=short"
+
+[tool.black]
+line-length = 100
+target-version = ["py312"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+select = ["E", "W", "F", "I", "B", "C4", "UP"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+check_untyped_defs = true
+strict_optional = true
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
