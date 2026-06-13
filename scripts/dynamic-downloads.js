@@ -25,18 +25,6 @@
     }
 
     function populateFromManifest(files) {
-        // Attach event handlers to hardcoded resume link if it exists
-        const resumeLink = linksSection.querySelector('.resume-link');
-        if (resumeLink) {
-            const pdfUrl = resumeLink.href;
-            const filename = 'Krishna Resume';
-            resumeLink.href = '#';
-            resumeLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                openPdfViewer(pdfUrl, filename);
-            });
-        }
-
         // Add any additional files from manifest (excluding resume which is already hardcoded)
         files.forEach(file => {
             if (file.name !== 'Resume') {
