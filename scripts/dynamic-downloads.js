@@ -54,24 +54,73 @@
         card.className = 'link-card';
 
         const link = document.createElement('a');
+        link.href = '#';
+        link.textContent = `${icon} ${label}`;
         
         // Handle different file sources
         if (source === 'github') {
-            // GitHub raw content URL - opens in new tab and can be downloaded
-            link.href = filepath;
-            link.target = '_blank';
-            link.rel = 'noopener noreferrer';
+            // GitHub PDF - open in modal viewer instead of direct download
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                openPdfViewer(filepath, filename);
+            });
         } else {
-            // Local file path
+            // Local file path - open in new tab
             link.href = filepath;
             link.target = '_blank';
             link.rel = 'noopener noreferrer';
+            link.removeEventListener('click', null);
         }
-        
-        link.textContent = `${icon} ${label}`;
 
         card.appendChild(link);
         return card;
+    }
+
+    function openPdfViewer(pdfUrl, filename) {
+        // Create modal overlay
+        const modal = document.createElement('div');
+        modal.className = 'pdf-modal';
+        modal.id = 'pdf-modal';
+        
+        // Create modal content
+        const modalContent = document.createElement('div');
+        modalContent.className = 'pdf-modal-content';
+        
+        // Create header with title and close button
+        const header = document.createElement('div');
+        header.className = 'pdf-modal-header';
+        
+        const title = document.createElement('h2');
+        title.textContent = filename;
+        
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'pdf-modal-close';
+        closeBtn.textContent = '✕';
+        closeBtn.addEventListener('click', () => modal.remove());
+        
+        header.appendChild(title);
+        header.appendChild(closeBtn);
+        
+        // Create iframe for PDF viewer
+        const iframe = document.createElement('iframe');
+        iframe.className = 'pdf-iframe';
+        iframe.src = pdfUrl;
+        iframe.title = filename;
+        
+        // Assemble modal
+        modalContent.appendChild(header);
+        modalContent.appendChild(iframe);
+        modal.appendChild(modalContent);
+        
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.remove();
+            }
+        });
+        
+        // Add to page
+        document.body.appendChild(modal);
     }
 
     // Load downloads when DOM is ready
