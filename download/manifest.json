@@ -1,11 +1,10 @@
 {
   "files": [
     {
-      "name": "Resume",
-      "path": "https://raw.githubusercontent.com/krishnabhunia/krishna-resume/main/Krishna_Resume.pdf",
-      "label": "View and Download File : Krishna Resume CV",
-      "icon": "📄",
-      "source": "github"
+      "name": "file_1",
+      "path": "download/Krishna Resume CV One Pager Exp 12+ Yrs.pdf",
+      "label": "View and Download File : Krishna Resume CV One Pager Exp 12+ Yrs",
+      "icon": "📄"
     }
   ]
 }
