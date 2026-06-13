@@ -42,23 +42,13 @@ body {
     border-bottom: 2px solid #e5e7eb;
     padding: 1rem;
     border-radius: 12px;
-}
-
-/* Make header sticky so name and designation remain visible while scrolling */
-.header {
     position: sticky;
-    top: 1rem; /* Adjust sticky position */
+    top: 1rem;
     z-index: 50;
-
-    /* Set background image with a semi-transparent overlay for readability */
     background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('../images/IMG_20170330_093055.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-    /* Add padding and border-radius for better aesthetics */
-    padding: 1rem;
-    border-radius: 12px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
 
@@ -76,9 +66,8 @@ body {
     font-weight: 600;
     letter-spacing: 0.025em;
     background: linear-gradient(120deg, #2563eb, #4f46e5);
-    -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
     padding: 0.25rem 0;
 }
 
@@ -122,6 +111,12 @@ body {
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
+    padding: 0.75rem;
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(248,250,252,0.6));
+    border: 1px solid rgba(15,23,42,0.04);
+    box-shadow: 0 4px 18px rgba(2,6,23,0.04);
+    overflow: visible;
 }
 
 .profile-photo {
@@ -130,7 +125,6 @@ body {
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #ffffff;
-    /* layered shadow + subtle colored ring for a polished portrait frame */
     box-shadow: 0 10px 30px rgba(2,6,23,0.09), 0 0 0 6px rgba(79,70,229,0.04);
     transition: transform 0.32s cubic-bezier(.2,.9,.2,1), box-shadow 0.2s ease;
     transform-origin: center center;
@@ -139,7 +133,6 @@ body {
 }
 
 .profile-photo:hover {
-    /* keep a subtle hover lift but avoid huge transforms that clip */
     transform: scale(1.06);
     box-shadow: 0 18px 48px rgba(2,6,23,0.16), 0 0 0 6px rgba(79,70,229,0.06);
 }
@@ -147,7 +140,7 @@ body {
 /* Full-screen centered modal for reliably viewing enlarged photos */
 .photo-modal {
     position: fixed;
-    inset: 0; /* top:0; right:0; bottom:0; left:0 */
+    inset: 0;
     display: none;
     align-items: center;
     justify-content: center;
@@ -155,9 +148,11 @@ body {
     z-index: 9999;
     padding: 2rem;
 }
+
 .photo-modal.open {
     display: flex;
 }
+
 .photo-modal__image {
     max-width: 92vw;
     max-height: 92vh;
@@ -167,6 +162,7 @@ body {
     object-fit: contain;
     box-shadow: 0 30px 80px rgba(2,6,23,0.4), 0 0 0 8px rgba(255,255,255,0.02);
 }
+
 .photo-modal__close {
     position: fixed;
     right: 1.25rem;
@@ -178,20 +174,6 @@ body {
     cursor: pointer;
     font-weight: 700;
     z-index: 10000;
-}
-
-/* decorative wrapper for photos */
-.photo-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    padding: 0.75rem;
-    border-radius: 16px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(248,250,252,0.6));
-    border: 1px solid rgba(15,23,42,0.04);
-    box-shadow: 0 4px 18px rgba(2,6,23,0.04);
-    overflow: visible;
 }
 
 h1 {
@@ -209,14 +191,7 @@ h1 {
 }
 
 .contact-item {
-    /* Match the visual style of `.social-link` for consistency */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 0.75rem;
@@ -276,12 +251,13 @@ h1 {
     justify-content: center;
     margin-bottom: 1rem;
     flex-wrap: wrap;
-}
-.tab-buttons.is-sticky {
+    position: sticky;
+    top: 4.5rem;
     background: var(--card-bg);
     padding: 0.5rem 0.5rem;
     border-radius: 8px;
     box-shadow: 0 6px 18px rgba(16,24,40,0.08);
+    z-index: 40;
 }
 .tab-button {
     background: transparent;
@@ -324,14 +300,7 @@ h1 {
 }
 
 .link-card {
-    /* Match `.social-link` visual style: card-like full-width links */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 1rem;
@@ -371,30 +340,16 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Social Links Styles: make rendering consistent across Chrome and Edge */
 .socials {
-    /* fallbacks and vendor prefixes for cross-browser flexbox behavior */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    gap: 0.75rem; /* modern browsers */
+    gap: 0.75rem;
     margin-top: 0.5rem;
     width: 100%;
 }
 
 .social-link {
-    /* ensure each link acts as a full-width block while keeping icon+text inline */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 1rem;
@@ -405,7 +360,7 @@ a:hover {
     font-weight: 600;
     transition: transform 0.12s ease, box-shadow 0.12s ease;
     width: 100%;
-    white-space: normal; /* allow wrapping if needed */
+    white-space: normal;
 }
 
 .link-card:hover,
@@ -450,8 +405,6 @@ a:hover {
     margin: 0 auto;
     padding: 0.5rem;
     line-height: 1.4;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Responsive Design */
@@ -467,6 +420,10 @@ a:hover {
     /* smaller top offset for sticky header on small screens */
     .header {
         top: 1rem;
+    }
+
+    .tab-buttons {
+        top: 3.5rem;
     }
 
     .contact-item {
