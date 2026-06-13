@@ -1,12 +1,11 @@
-// Dynamically load files from the download folder
+// Dynamically load files from the download folder and external sources
 (function () {
     const DOWNLOAD_FOLDER = 'download';
     const linksSection = document.querySelector('.links-section');
     if (!linksSection) return;
 
     // Fetch the download folder to get file list
-    // For a static site, we'll use a simple manifest JSON file approach
-    // If no manifest exists, we'll populate hardcoded links and load dynamic PDFs
+    // Supports both local files and remote GitHub URLs
     
     async function loadDownloads() {
         try {
@@ -39,7 +38,7 @@
 
         // Add new download cards from manifest
         files.forEach(file => {
-            const card = createLinkCard(file.name, file.path, file.label, file.icon);
+            const card = createLinkCard(file.name, file.path, file.label, file.icon, file.source);
             linksSection.appendChild(card);
         });
     }
@@ -50,15 +49,26 @@
         console.log('Using fallback hardcoded downloads');
     }
 
-    function createLinkCard(filename, filepath, label, icon = '📄') {
+    function createLinkCard(filename, filepath, label, icon = '📄', source = 'local') {
         const card = document.createElement('div');
         card.className = 'link-card';
 
         const link = document.createElement('a');
-        link.href = filepath;
+        
+        // Handle different file sources
+        if (source === 'github') {
+            // GitHub raw content URL - opens in new tab and can be downloaded
+            link.href = filepath;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+        } else {
+            // Local file path
+            link.href = filepath;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+        }
+        
         link.textContent = `${icon} ${label}`;
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
 
         card.appendChild(link);
         return card;
