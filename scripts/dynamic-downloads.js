@@ -25,21 +25,12 @@
     }
 
     function populateFromManifest(files) {
-        // Clear existing download items (keep non-download links)
-        const existingCards = linksSection.querySelectorAll('.link-card');
-        
-        // Remove old download cards (assume last card is resume if it has PDF)
-        existingCards.forEach(card => {
-            const anchor = card.querySelector('a');
-            if (anchor && (anchor.href.includes('.pdf') || anchor.href.includes('download='))) {
-                card.remove();
-            }
-        });
-
-        // Add new download cards from manifest
+        // Add any additional files from manifest (excluding resume which is already hardcoded)
         files.forEach(file => {
-            const card = createLinkCard(file.name, file.path, file.label, file.icon, file.source);
-            linksSection.appendChild(card);
+            if (file.name !== 'Resume') {
+                const card = createLinkCard(file.name, file.path, file.label, file.icon, file.source);
+                linksSection.appendChild(card);
+            }
         });
     }
 
