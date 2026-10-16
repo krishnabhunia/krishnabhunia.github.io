@@ -1,3 +1,14 @@
+# Personal portfolio and GitHub Pages site
+
+A responsive GitHub Pages portfolio using static HTML/CSS/JavaScript, plus Python 3.12 portfolio utilities, tests and a manifest generation workflow.
+
+**[Architecture, setup, diagrams, testing and limitations](docs/PROJECT_GUIDE.md)**
+
+
+---
+
+## Previously documented notes
+
 # Krishna Bhunia's Personal Website
 
 A modern, responsive personal portfolio website built with vanilla HTML, CSS, and JavaScript. This GitHub Pages site showcases my professional profile, contact information, social connections, and downloadable resume.
